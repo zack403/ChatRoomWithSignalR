@@ -7,7 +7,64 @@
 h4 {
     font-size: 40px;
 }
+#myh {
+    text-align: left;
+    color: lightblue;
+    letter-spacing: 3px;
+    text-shadow: 3px 2px blue;
+   
+}
+#my {
+    text-align: center;
+    color:lightblue;
+    
+}
+#bod {
+    background-color:lightblue;
+}
+.container {
+    padding-left:330px;
+}
+header, footer {
+    padding: 10px;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+   
+}
+#ip {
+    text-align:center; 
+     color: lightblue; 
+     padding-top:30px;
+}   
+.myf {
+    width: 500px; 
+    height: 500px; 
+    border:2px solid;
+    background-color:white; 
+    border-radius:30px;
+    border-color:lightblue;
+    
 
+}
+ img{
+    height:20%;
+    padding-left:200px;
+    padding-top:50px;
+
+}
+.btngroup {
+    padding-left: 50px;
+    padding-top: 300px;
+    
+}
+#inp {
+    border-radius:20px;
+    width:400px; 
+    border-color:lightblue;
+    
+}
 #discussion {
     height: 400px;
     border-style: solid;

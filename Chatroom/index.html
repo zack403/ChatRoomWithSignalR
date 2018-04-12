@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html ng-app="chat">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8" />
     <!-- CSS -->
     <link href="content/bootstrap.min.css" rel="stylesheet" />
@@ -20,51 +21,29 @@
     <script src="angularjs-services/signalr-service.js"></script>
 
     <title>Chat Room with SignalR</title>
+    <link rel="shortcut icon" href="Images/Chat1Line.png">
 </head>
-<body ng-controller="Login as login">
-    <div id="logOut" ng-show="login.loggedIn" ng-click="login.logOut()">
-        <button id="buttonLogOut" class="btn btn-danger">Log Out</button>
-    </div>
-    <div class="container">
-        <div class="text-center">
-            <h1>Chatroom With SignalR </h1>
-        </div>
-
-        <div class="row">
-            <!-- Logging Out -->
-            <!--<div class="col-md-5 align-self-start">
-
-            </div> -->
-            <div class="col-md-10" ng-show="login.loggedIn"><h4>Welcome, {{login.rootScope.name}}</h4></div>
-            <div class="col-md-2 align-self-end" ng-show="login.loggedIn"><h4 id="online">Online</h4></div>
-            <!-- Login User-->
-            <div class="col" ng-show="!login.loggedIn">
-                <form>
-                    <p style="float:left;">Name</p>
-                    <input id="name" type="text" label="Name" required>
-                    <input type="submit" value="Log In" ng-click="login.logIn()">
-                </form>
+<body id="bod">
+    <header >
+        <!--<img  src="Images/download.jpg" />-->
+        <h1 id="myh"> CHATROOM</h1>
+    </header>
+    <div class="container" >
+       
+        <form class="myf" >
+            <h3 id="my"> ChatRoom App</h3>      
+                <!--<img  src="Images/Chat1Line.png" />-->
+                <!--<p >Meet, Chat, Friends...</p>-->
+            <div class="btngroup" >
+                <input id="inp" title="signup" class="btn-danger" type="button" onclick="location.href = 'Chat.html'" value="SIGN UP" /> <br /> <br />
+                <input id="inp" title="login" class="btn-primary" type="button" onclick="location.href = 'Chat.html'" value="Already Have an Account? Log in" />
             </div>
-        </div>
-        <div class="row">
-            <!-- Chat Room Messages will be appended here -->
-            <div class="col-lg-9" id="discussion" ng-show="login.loggedIn"></div>
-            <div class="col-lg-1"></div>
-            <!-- Displays All Logged in users -->
-            <div id="user" ng-show="login.loggedIn"></div>
-            <!-- Users Enter Messages here -->
+       
+        </form>
 
-        </div>
-        <div class="row" id="form" ng-controller="EnterMessage as message" ng-show="login.loggedIn">
-            <form>
-                <div class="col-lg-8 chat" id="text-div">
-                    <input id="text" type="text" autocomplete="off" />
-                </div>
-                <div class="col-lg-1 chat" id="send-div">
-                    <input id="send" class="btn btn-primary" ng-click="message.enterText()" type="submit" value="send" />
-                </div>
-            </form>
-        </div>
     </div>
+    <footer  >
+           <p id="ip"> Copyrights &copy; ZACK</p>
+     </footer>
 </body>
 </html>

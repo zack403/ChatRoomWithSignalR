@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html ng-app="chat">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <!-- CSS -->
+    <link href="content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Style.css" rel="stylesheet" />
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <!-- Necessary for AngularJS -->
+    <script src="Scripts/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <!-- Necessary for SignalR -->
+    <script src="Scripts/jquery-1.6.4.js"></script>
+    <script src="Scripts/jquery.signalR-2.2.3.min.js"></script>
+    <script src="Scripts/angular-signalr-hub.min.js"></script>
+    <!-- Scripts for AngularJS App -->
+    <script src="app.js"></script>
+    <script src="angularjs-services/signalr-service.js"></script>
+-
+    <title>Chat Room </title>
+    <link rel="shortcut icon" href="Images/Chat1Line.png">
+</head>
+<body ng-controller="Login as login" style="background-color:lightblue">
+    <div id="logOut" ng-show="login.loggedIn" ng-click="login.logOut()">
+        <button style="float:right" id="buttonLogOut" class="btn btn-danger">Log Out</button>
+    </div>
+    <div class="container">
+        <div class="text-primary">
+            <h1 style="color:white">Chatroom Login </h1>
+        </div>
+
+        <div class="row">
+            <!-- Logging Out -->
+            <!--<div class="col-md-5 align-self-start">
+
+            </div> -->
+            <div class="col-md-10" ng-show="login.loggedIn"><h4>Welcome, {{login.scope.name}}</h4></div>
+            <div class="col-md-2 align-self-end" ng-show="login.loggedIn"><h4 id="online">Online</h4></div>
+            <!-- Login User-->
+            <div class="col-sm-2" ng-show="!login.loggedIn">
+               
+                <form>
+                    <p style="color:red">{{error}}</p>
+
+                    <label > Name </label>
+                    <div class="input-group">
+                        <input class="form-control-static" id="name" type="text" label="Name" required><br />
+                        <span class="input-group-addon"><i style="color:blue" class="glyphicon glyphicon-user"></i></span>
+
+                    </div>
+                    <label> Password </label>
+                    <div class="input-group">
+                        <input class="form-control-static" id="pass" type="password" label="Password" required><br />
+                        <span class="input-group-addon"><i style="color:blue" class="glyphicon glyphicon-lock"></i></span>
+                    </div> <br />
+                   
+                 <!--<button class="btn btn-success" ng-click="login.logIn()"> Log In </button>-->
+                    <input class="btn-primary " type="submit" value="Log In" ng-click="login.logIn()">
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Chat Room Messages will be appended here -->
+            <div class="col-lg-9" id="discussion" ng-show="login.loggedIn"></div>
+            <div class="col-lg-1"></div>
+            <!-- Displays All Logged in users -->
+            <div id="user" ng-show="login.loggedIn"></div>
+            <!-- Users Enter Messages here -->
+
+        </div>
+        <div class="row" id="form" ng-controller="EnterMessage as message" ng-show="login.loggedIn">
+            <form>
+                <div class="col-lg-8 chat" id="text-div">
+                    <input id="text" type="text" autocomplete="off" />
+                </div>
+                <div class="col-lg-1 chat" id="send-div">
+                    <input id="send" class="btn btn-primary" ng-click="message.enterText()" type="submit" value="send" />
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
