@@ -3,7 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chatroom", "Chatroom\Chatroom.csproj", "{2496837F-E271-4539-9EAE-66ED4BDC0D03}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat.Api", "ChatRoom.Api\Chat.Api.csproj", "{C6C5BCE8-24F6-4329-B104-44C00E73B1D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatBusiness", "ChatroomBusiness\ChatBusiness.csproj", "{8A12084C-B496-4D15-93DC-6F67A2DB86D5}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "chat-client", "..\chat-client\", "{8F70D247-6144-460B-91A5-BEE0DF0B2645}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_22665"
+		Debug.AspNetCompiler.PhysicalPath = "..\chat-client\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_22665\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_22665"
+		Release.AspNetCompiler.PhysicalPath = "..\chat-client\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_22665\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "22665"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +33,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2496837F-E271-4539-9EAE-66ED4BDC0D03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2496837F-E271-4539-9EAE-66ED4BDC0D03}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2496837F-E271-4539-9EAE-66ED4BDC0D03}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2496837F-E271-4539-9EAE-66ED4BDC0D03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6C5BCE8-24F6-4329-B104-44C00E73B1D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6C5BCE8-24F6-4329-B104-44C00E73B1D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6C5BCE8-24F6-4329-B104-44C00E73B1D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6C5BCE8-24F6-4329-B104-44C00E73B1D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A12084C-B496-4D15-93DC-6F67A2DB86D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A12084C-B496-4D15-93DC-6F67A2DB86D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A12084C-B496-4D15-93DC-6F67A2DB86D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A12084C-B496-4D15-93DC-6F67A2DB86D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F70D247-6144-460B-91A5-BEE0DF0B2645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F70D247-6144-460B-91A5-BEE0DF0B2645}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F70D247-6144-460B-91A5-BEE0DF0B2645}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F70D247-6144-460B-91A5-BEE0DF0B2645}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
